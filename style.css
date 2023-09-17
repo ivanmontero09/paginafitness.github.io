@@ -1,0 +1,428 @@
+/* obligatorio*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+span{
+    font-weight: bold;
+}
+html{
+    background: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    ) ,url(imagenes/Fondos/fondo.webp);
+    scroll-behavior: smooth;
+}
+
+p{
+  font-size: 20px;
+}
+/* obligatorio*/
+
+article{
+  display: flex;
+  flex-direction: column;
+}
+
+/* ENCABEZADO*/
+
+nav{
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul{
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a{
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ENCABEZADO*/
+
+/*INICIO*/
+
+#inicio{
+  color: #fff;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*INICIO*/
+
+
+
+/*COMO EMPEZAR*/
+
+#como-empezar{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 35%, rgba(148,148,148,1) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#como-empezar h2{
+  margin: 0!important;
+  font-size: 60px;
+  text-align: center;
+}
+
+#como-empezar_titulo h2{
+    font-family: monospace;
+    font-size: 60px; 
+    line-height: 1px;  
+}
+
+#como-empezar_info{
+    display: flex;
+}
+
+#como-empezar_info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#333, #555);
+  min-height: 60vh; /* Establecer una altura mínima */
+  color: #fff;
+  font-size: 1.45em;
+}
+
+
+#como-empezar_info h3, #como-empezar_info p{
+  margin: 0!important;
+}
+
+/*COMO EMPEZAR*/
+
+/*EJERCICIOS*/
+
+    #ejercicios{
+        height: 100vh;
+        background: #ccc;
+    }
+
+    #ejercicios_titulo{
+        text-align: center;
+    }
+
+    #ejercicios_titulo h2{
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        font-size: 60px;
+        margin: 20px;
+        font-family: monospace;
+    }
+
+    #ejercicios_titulo p{
+      color: #000;
+      font-size: 1.32em;
+    }
+/*EJERCICIOS*/
+
+/*DESLIZAR*/
+/* PRODUCTS */
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .product h2{
+    text-align: center;
+  }
+  
+  .product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+  
+  .product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+  .product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .product-image img{
+    object-fit: contain;
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-card:hover .card-btn {
+    opacity: 1;
+  }
+  
+  .product-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  
+  .product-brand {
+    text-transform: uppercase;
+  }
+  
+  .actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+  
+  .collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .collection {
+    position: relative;
+  }
+  
+  .collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+  
+  .collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+  }
+  
+  /*DESLIZAR*/
+
+  /*SUPLEMENTOS*/
+
+  #suplementos{
+    background: rgb(235, 235, 235);
+    height: 90vh;
+  }
+
+  #suplementos_titulo{
+    text-align: center;
+    font-family: monospace;
+  }
+
+  #suplementos_titulo h2{
+    font-size: 60px;
+    padding: 15px;
+    margin: 5px;
+    font-family: monospace;
+  }
+
+  #suplementos_titulo p{
+    font-size: 30px;
+  }
+
+  #suplementos_info{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .suple{
+    height: 65vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background .5s;
+  }
+
+  .suple h3{
+    font-size: 30px;
+  }
+
+  .suple p{
+    font-size: 25px;
+  }
+
+  .suple:hover{
+    background: rgb(219, 219, 219);
+  }
+
+  .suple img{
+    height: 160px;
+    }
+    /*SUPLEMENTOS*/
+
+
+    /*CALORIAS*/
+
+      #calorias{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        background: rgb(252, 250, 250);
+      }
+
+      #calorias h2{
+        font-family: monospace;
+        font-size: 35px;
+      }
+
+      #calorias p{
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      #calorias a{
+        text-decoration: none;
+      }
+
+      #calorias img{
+        width: 450px;
+      }
+
+
+     /*CALORIAS*/
+/*FOOTER*/
+
+    footer{
+      background: rgb(235, 235, 235);
+      display: flex;
+      justify-content: center
+    }
+
+    footer p{
+      margin: 0;
+    }
+
+    footer p a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+/*FOOTER*/
+
+
+
+
+
+@media screen and (max-width: 768px){
+  nav{
+    display: none;
+  }
+
+  #como-empezar_info{
+    overflow: hidden;
+    height: 55vh;
+  }
+
+  #como-empezar_info div h3{
+    font-size: 15px;
+  }
+
+  #como-empezar_info div p{
+    font-size: 15px;
+  }
+
+  .suple h3, .suple p{
+    font-size: 15px;
+  }
+
+  #calorias p{
+    font-size: 15px;
+  }
+
+  footer a{
+    font-size: 15px;
+  }
+}
